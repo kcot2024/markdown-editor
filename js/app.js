@@ -1,6 +1,7 @@
 const generateHtml = document.querySelector("#generate-html");
 const markdownInput = document.querySelector("#markdown-input");
 const previewSection = document.querySelector("#preview-section");
+const generarEncabezado = document.querySelector("#generate-encabezados")
 
 function getTextFromTextArea() {
     const text = markdownInput.value;
@@ -39,6 +40,8 @@ function convertHeadings(html) {
   
     return html;
   }
+
+ 
   
   function convertToHtml(text) {
     let html = text;
@@ -48,6 +51,20 @@ function convertHeadings(html) {
     // evaluamos enlaces
   
     return html;
+  }
+
+
+  // cambiar color
+
+  function cambioColor(){
+    const cambioColor = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    cambioColor.forEach(cambioColor =>{
+      if (cambioColor.style.color === 'red'){
+        cambioColor.style.color = 'white'
+      }else {
+        cambioColor.style.color= 'red'
+      }
+    })
   }
   
   function renderPreview(html) {
@@ -61,3 +78,7 @@ function convertHeadings(html) {
     const html = convertToHtml(text); // convierte el value a un HTML
     renderPreview(html); // HTML lo muestra en el preview
   });
+  
+  generarEncabezado.addEventListener("click", function(){
+    cambioColor()
+  })

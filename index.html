@@ -10,10 +10,10 @@
     <header class="h-[7vh] bg-gray-1000">
       <div class="bg-gray-900 text-center p-5">
         <button id="generate-html" class=" px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-800 ">Generar Vista Previa</button>
-        <button id="generate-html" class=" px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400 ">Contrastar Encabezados</button>
+        <button id="generate-encabezados" class=" px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400 ">Contrastar Encabezados</button>
       </div>
     </header>
-    <main class="max-h-screen h-screen p-4">
+    <main class="max-h-screen h-screen mt-4  p-4">
         <article class="grid grid-cols-1 md:grid-cols-2 h-full gap-4">
             <section class="border">
                 <textarea
@@ -22,7 +22,7 @@
                 placeholder="Escribe tu código Markdown aquí..."
               ></textarea>
             </section>
-            <section id="preview-section" class="border h-full p-4 overflow-auto">Preview</section>
+            <section id="preview-section" class="border h-full p-4 overflow-auto"></section>
         </article>
     </main>
     <footer></footer>
